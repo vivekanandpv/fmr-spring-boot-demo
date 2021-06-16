@@ -12,4 +12,5 @@ public interface IBookService {
     void create(BookCreateViewModel viewModel);
     void update(BookUpdateViewModel viewModel);
     void delete(int id);
+    BookViewModel getFromMultithreading();
 }

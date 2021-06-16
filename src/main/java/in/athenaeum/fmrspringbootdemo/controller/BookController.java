@@ -30,6 +30,11 @@ public class BookController {
         return ResponseEntity.ok(bookService.get(id));
     }
 
+    @GetMapping("mt")
+    public ResponseEntity<BookViewModel> getMultiThreading() {
+        return ResponseEntity.ok(bookService.getFromMultithreading());
+    }
+
     @PostMapping
     public ResponseEntity<?> create(@RequestBody BookCreateViewModel viewModel) {
         bookService.create(viewModel);

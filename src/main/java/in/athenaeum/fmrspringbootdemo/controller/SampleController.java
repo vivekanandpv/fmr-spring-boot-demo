@@ -19,9 +19,8 @@ public class SampleController {
         return "Report for year: " + currentYear + " for city: " + currentCity;
     }
 
-    //  POST (Create)
-
-    //  PUT (Update)
-
-    //  DELETE (Delete)
+    @GetMapping("exception")
+    public String exception() {
+        throw new RuntimeException("Oops!!!");
+    }
 }

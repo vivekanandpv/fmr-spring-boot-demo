@@ -52,16 +52,4 @@ public class BookController {
         bookService.delete(id);
         return ResponseEntity.ok().build();
     }
-
-    @ExceptionHandler
-    public ResponseEntity<?> handleRecordNotFoundException(RecordNotFoundException exception) {
-        return ResponseEntity.notFound().build();
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<?> handleDomainValidationException(DomainValidationException exception) {
-        return ResponseEntity.badRequest().build();
-    }
-
-
 }
